@@ -8,7 +8,7 @@ public class MessageProducerService {
     @Autowired
     MessageProducer messageProducer;
 
-    public void sendMessage(String msg){
+    public void sendMessage(MessageDto msg) {
         messageProducer.send(msg);
     }
 }

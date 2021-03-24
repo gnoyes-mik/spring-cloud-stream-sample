@@ -15,7 +15,7 @@ public class MessageProducer {
     Source source;
 
     @SendTo(Source.OUTPUT)
-    public void send(String msg) {
+    public <T> void send(T msg) {
         logger.info("sending message ... msg is " + msg);
         source.publish().send(MessageBuilder.withPayload(msg).build());
     }

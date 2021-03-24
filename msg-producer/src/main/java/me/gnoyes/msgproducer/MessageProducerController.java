@@ -12,7 +12,7 @@ public class MessageProducerController {
     MessageProducerService messageProducerService;
 
     @PostMapping("/")
-    public void sendMessage(@RequestBody String msg) {
+    public void sendMessage(@RequestBody MessageDto msg) {
         messageProducerService.sendMessage(msg);
     }
 
