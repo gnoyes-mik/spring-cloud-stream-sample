@@ -7,5 +7,5 @@ spring:
       bindings:
         input-channel:
           group: group2
-          destination: test_topic
+          destination: test_topic_1
           contentType: application/json

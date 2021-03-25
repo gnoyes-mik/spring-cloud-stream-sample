@@ -5,7 +5,11 @@ spring:
         binder:
           brokers: localhost:9092
       bindings:
-        input-channel:
+        event-1:
           group: group1
-          destination: test_topic
+          destination: test_topic_1
+          contentType: application/json
+        event-2:
+          group: group1
+          destination: test_topic_2
           contentType: application/json

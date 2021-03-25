@@ -9,6 +9,7 @@ public class MessageConsumer {
 
     @StreamListener(Sink.INPUT)
     public void receive(Message<?> msg) {
-        System.out.println("I'm consumer in GROUP 2, here's msg : " + msg.getPayload());
+        System.out.println("I'm consumer in GROUP 2. msg : " + msg.getPayload());
+
     }
 }

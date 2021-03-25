@@ -7,8 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageConsumer {
 
-    @StreamListener(Sink.INPUT)
-    public void receive(Message<?> msg) {
-        System.out.println("I'm consumer in GROUP 1, here's msg : " + msg.getPayload());
+    @StreamListener(Sink.INPUT_EVENT_1)
+    public void receiveEvent1(Message<?> msg) {
+        System.out.println("I'm consumer in GROUP 1. msg : " + msg.getPayload());
+    }
+
+    @StreamListener(Sink.INPUT_EVENT_2)
+    public void receiveEvent2(Message<?> msg) {
+        System.out.println("I'm consumer in GROUP 1. msg : " + msg.getPayload());
     }
 }

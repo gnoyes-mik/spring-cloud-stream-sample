@@ -6,7 +6,7 @@ spring:
           brokers: localhost:9092
       bindings:
         output-channel:
-          destination: test_topic_1
+          destination: test_topic_2
           contentType: application/json
 server:
-  port: 8081
+  port: 8082
