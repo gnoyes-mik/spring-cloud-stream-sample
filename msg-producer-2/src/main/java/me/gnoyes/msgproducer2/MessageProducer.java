@@ -14,6 +14,7 @@ public class MessageProducer {
     @Autowired
     Source source;
 
+    // Produce 할 시 @SendTo 어노테이션
     @SendTo(Source.OUTPUT)
     public <T> void send(T msg) {
         logger.info("sending message ... msg is " + msg);

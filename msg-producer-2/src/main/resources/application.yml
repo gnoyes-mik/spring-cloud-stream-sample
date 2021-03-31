@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: producer-2
   cloud:
     stream:
       kafka:
